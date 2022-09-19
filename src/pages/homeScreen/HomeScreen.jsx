@@ -1,16 +1,20 @@
 import React from 'react';
-import About from '../../components/about/About';
 import BarNav from '../../components/nav/BarNav';
 
-
-import './homeScreen.scss'
+import './homeScreen.scss';
 
 const HomeScreen = () => {
     return (
-        <div>
-            <BarNav/>
-            <About/>
+      <>
+      
+      <BarNav/>
+    
+        <div className='logo'>
+          <a href="#"> <img src="../img/logo.png" alt="" id='logo_home'/> </a>
         </div>
+        
+        
+        </>
     );
 };
 
