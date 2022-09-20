@@ -1,11 +1,22 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import BarNav from '../../components/nav/BarNav';
 
 const BaseScreen = () => {
     return (
-        <div>
-            <BarNav />
-        </div>
+        <>
+            <header>
+                <BarNav />
+            </header>
+            <main>
+                <Outlet />
+
+               
+            </main>
+            <footer>
+
+            </footer>
+        </>
     );
 };
 

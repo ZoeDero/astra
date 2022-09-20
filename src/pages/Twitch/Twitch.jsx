@@ -11,7 +11,7 @@ const Twitch = ({color, AddTwitchColor}) => {
    
    return (
        <div id='twitch_page'>
-            <BarNav />
+           
             <div>
                 <h1 id='titleTwitchPage' classNameName='text-center'>Twitch</h1>
             </div>

@@ -7,7 +7,7 @@ const HomeScreen = () => {
     return (
       <>
       
-      <BarNav/>
+     
     
         <div className='logo'>
           <a href="#"> <img src="../img/logo.png" alt="" id='logo_home'/> </a>

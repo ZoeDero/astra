@@ -7,7 +7,7 @@ const Youtube = () => {
     return (
         <div id="yt">
         <div >
-            <BarNav/>
+            
             <h1>Youtube</h1>
            
 

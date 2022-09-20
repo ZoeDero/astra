@@ -1,11 +1,11 @@
 import React from 'react';
-import BarNav from '../../components/nav/BarNav';
+
 import './instagram.scss';
 
 const Instagram = () => {
     return (
-        <div>
-            <BarNav/>
+        <div className="insta">
+            
             <h1>Instagram</h1>
         </div>
     );
