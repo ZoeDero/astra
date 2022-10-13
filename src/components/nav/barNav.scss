@@ -3,10 +3,12 @@
 #navigation {
     height:10vh;
     width: 10vh;
-    flex-direction: row-reverse !important; 
-    position: fixed;
-    transform:rotate(-90deg);
-    top:45vh;
+  margin-top: 45vh;
+   padding-left: 10px;
+   padding-right: 10px;
+   transform: rotate(-90deg);
+    position:fixed;
+   
     
     
 }
@@ -14,6 +16,9 @@
 #navigation a{
     height:10px;
     margin:5px;
+    color:rgb(133, 134, 135);
+    padding-top:2px;
+    
 }
 
 #navigation li, a {
@@ -22,15 +27,17 @@
     font-size:16px;
     padding-top: 0px;
     margin-top: 0px;
-    color:rgb(99, 173, 247);
+   
 }
 
 
 #navigation a:hover {
     
     padding-top: 0px;
-    margin-top: 15px !important;
-    color:rgb(253, 250, 253);
+    // margin-top: 15px !important;
+    // cursor:none;
+    border-top:2px solid orange;
+   
    
 }
 

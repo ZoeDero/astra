@@ -8,10 +8,10 @@ const ProductCard = ({title, description}) => {
        
    <div className="card m-2 p-0 rounded-1 text-center ">
   <div className="card-body m-auto">
-    <h5 className="card-title">DOOM 64</h5>
+    <h5 className="card-title">{title}</h5>
    
   </div>
-  {title};
+  {description}
 </div>
   
         

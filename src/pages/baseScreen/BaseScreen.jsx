@@ -5,6 +5,7 @@ import BarNav from '../../components/nav/BarNav';
 const BaseScreen = () => {
     return (
         <>
+        
             <header>
                 <BarNav />
             </header>

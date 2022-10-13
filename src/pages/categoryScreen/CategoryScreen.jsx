@@ -1,5 +1,4 @@
 import React from 'react';
-import BarNav from '../../components/nav/BarNav';
 import './categoryScreen.scss';
 import ProductCard from '../../components/card/ProductCard';
 
@@ -9,7 +8,7 @@ const CategoryScreen = () => {
    
               
           <div  className='d-flex flex-column justify-content-center align-items-center'>
-            <h1>First Person Shooters</h1>
+            <h1>{categorie.title}</h1>
           <ProductCard/>
       
           </div>

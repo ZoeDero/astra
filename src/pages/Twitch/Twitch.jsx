@@ -13,7 +13,7 @@ const Twitch = ({color, AddTwitchColor}) => {
        <div id='twitch_page'>
            
             <div>
-                <h1 id='titleTwitchPage' classNameName='text-center'>Twitch</h1>
+                <h1 id='titleTwitchPage' className='text-center'>Twitch</h1>
             </div>
             <div className='twitch_player'>
             <ReactPlayer url='https://www.twitch.tv/astrapunk' className='twitch_player'  />

@@ -6,9 +6,27 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import React, {Suspense, useState} from'react';
+import React, {Suspense, useState, useEffect} from'react';
 import BaseScreen from './pages/baseScreen/BaseScreen'
 
+
+
+
+
+//CUSTOM POINTER
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e => {
+  cursor.setAttribute('style', 'top:'+(e.pageY - 20)+"px; left:"+(e.pageX - 20)+"px;")
+})
+
+document.addEventListener('click', ()=>{
+  cursor.classList.add('expand');
+
+  setTimeout(()=>{
+    cursor.classList.remove('expand');
+  },500);
+})
+//--------------
 
 const Twitch = React.lazy(() => import("./pages/Twitch/Twitch"));
 const Youtube = React.lazy(() => import("./pages/youtube/Youtube"));
@@ -18,6 +36,13 @@ const CategoryScreen= React.lazy(() => import("./pages/categoryScreen/CategorySc
 
 
 function App() {
+
+  const [text, setText] =useState("");
+    useEffect(()=> {
+      fetch('http://astra-api/')
+        .then(response => response.text())
+        .then(content => setText(content));
+    },[])
  
   const[color, setColor]=useState(true);
 
@@ -25,39 +50,45 @@ function App() {
  
     
   return (
-
+    <>
+    <div className='App'>
+      {text}
+    </div>
+    
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<BaseScreen/>}>
+    
           <Route index element={
-            <Suspense fallback={<span>chargement</span>}>
+            <Suspense >
               <HomeScreen/>
 
             </Suspense>
             
           }/>
           <Route path="/twitch" element={
-              <Suspense fallback={<span>chargement</span>}>
+              <Suspense >
               <Twitch/>
             </Suspense>
           }/>
            <Route path="/youtube" element={
-              <Suspense fallback={<span>chargement</span>}>
+              <Suspense >
               <Youtube/>
             </Suspense>
           }/>
-            <Route path="/instagram" element={
-              <Suspense fallback={<span>chargement</span>}>
+            {/* <Route path="/instagram
+            " element={
+              <Suspense >
               <Instagram/>
             </Suspense>
-          }/>
+          }/> */}
             <Route path="/boutique" element={
-              <Suspense fallback={<span>chargement</span>}>
+              <Suspense>
               <Boutique/>
             </Suspense>
           }/>
             <Route path="/category/:categoryName" element={
-              <Suspense fallback={<span>chargement</span>}>
+              <Suspense>
               <CategoryScreen/>
             </Suspense>
           }/>
@@ -65,30 +96,13 @@ function App() {
       </Routes>
     </BrowserRouter>
 
+    </>
 
 
 
 
 
-
-  //  <BrowserRouter>
-  //   <Routes>
-  //     <Route path='/' element={<HomeScreen />}/>
-  //     <Route path='/' element={<BaseScreen />}/>
-  //         <Route path='/twitch' element={
-  //           // <Suspense fallback={<h1>Loading</h1>}>
-  //             <Twitch />
-  //           // </Suspense>
-  //         } />
-  //     <Route path='/youtube' element={<Youtube onClick={()=>setColor(color='white')} />}/>
-  //     <Route path='/insta' element={<Instagram/>}/>
-  //     <Route path='/boutique' element={<Boutique/>}/>
-  //     <Route path='*' element={<HomeScreen/>}/>
-  //     <Route path='/categoryProduct' element={<CategoryProduct/>} />
-  //     <Route path='/categoryProduct/productCard' element={<ProductCard/>} />
-  //   </Routes>
-  //  </BrowserRouter>
-
+ 
 
   );
 }

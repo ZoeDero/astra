@@ -22,7 +22,7 @@ const BarNav = () => {
    
     <nav id="navigation" className={`d-flex justify-content-center `} >
     
-   
+  
         <NavLink to="/" className={`${color}`}>
           Home
         </NavLink>
@@ -32,15 +32,12 @@ const BarNav = () => {
         <NavLink to="/youtube"className={`${color}`} >
           Youtube
         </NavLink>
-        <NavLink to="/insta" className={`${color}`}>
+        {/* <NavLink to="/insta" className={`${color}`}>
           Instagram
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/boutique " className={`${color}`}>
           Boutique
         </NavLink>
-        
-      
-   
       
     </nav> 
   );

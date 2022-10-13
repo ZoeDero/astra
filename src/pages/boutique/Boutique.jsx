@@ -9,7 +9,7 @@ import './boutique.scss'
 
 const Boutique = () => {
     return (
-        <div className='d-flex'>
+        <div className='d-flex body-boutique'>
             
          
         <div className='container-fluid d-flex flex-column p-5 w-75 justify-content-center'>

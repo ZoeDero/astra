@@ -1,5 +1,5 @@
 import React from 'react';
-import BarNav from '../../components/nav/BarNav';
+
 
 import './homeScreen.scss';
 
@@ -10,7 +10,7 @@ const HomeScreen = () => {
      
     
         <div className='logo'>
-          <a href="#"> <img src="../img/logo.png" alt="" id='logo_home'/> </a>
+           <img src="../img/logoAstra.png" alt="" id='logo_home'/> 
         </div>
         
         
