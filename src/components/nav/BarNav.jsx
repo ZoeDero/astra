@@ -1,30 +1,45 @@
 import React from "react";
 import "./barNav.scss";
-import Nav from "react-bootstrap/Nav";
+
+import { NavLink, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
+
+
+
 
 const BarNav = () => {
+    const route=useLocation()
+    const [color, setColor]= useState("");
+    useEffect(()=>{
+      setColor(route.pathname.replace("/",""))//on enleve le slash pour pouvoir faire appel dans une className
+
+    }, [route]);
+
+  
+
   return (
-    <Nav id="nav-head"
-      activeKey="/home"
+   
+    <nav id="navigation" className={`d-flex justify-content-center `} >
+    
+  
+        <NavLink to="/" className={`${color}`}>
+          Home
+        </NavLink>
+        <NavLink to="/twitch" className={`${color}`}>
+          Twitch
+        </NavLink>
+        <NavLink to="/youtube"className={`${color}`} >
+          Youtube
+        </NavLink>
+        {/* <NavLink to="/insta" className={`${color}`}>
+          Instagram
+        </NavLink> */}
+        <NavLink to="/boutique " className={`${color}`}>
+          Boutique
+        </NavLink>
       
-    >
-      <Nav.Item class="nav-item-head">
-        <Nav.Link href="/home">A propos</Nav.Link>
-      </Nav.Item>
-      <Nav.Item class="nav-item-head">
-        <Nav.Link href="/" >Twitch</Nav.Link>
-      </Nav.Item >
-      <Nav.Item class="nav-item-head">
-        <Nav.Link  href="/home" >Youtube</Nav.Link>
-      </Nav.Item>
-      <Nav.Item class="nav-item-head">
-        <Nav.Link href="/home" eventKey="Suis moi sur insta pour voir mes dernières créations">Insta</Nav.Link>
-      </Nav.Item>
-      <Nav.Item class="nav-item-head">
-        <Nav.Link  href="/home" eventKey="Envie de représenter la commu où besoin d'un overlay ?">Shop</Nav.Link>
-      </Nav.Item>
-      
-    </Nav>
+    </nav> 
   );
 };
 

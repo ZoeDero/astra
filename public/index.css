@@ -1,0 +1,59 @@
+/* body{
+    margin: 0;
+    padding: 0;
+    overflow: none;
+    height: 100vh;
+    cursor: none;
+}
+
+.cursor{
+    width: 40px;
+    height: 40px;
+    
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    border-radius:50%;
+    position: absolute;
+    animation: Anim1 1s infinite alternate;
+}
+
+.cursor::before{
+    content:'';
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height:20px;
+    background: orange;
+    border-radius:50%;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    pointer-events: none!important;
+    
+}
+
+.expand {
+    animation:  Anim2 5s;
+    background-color: rgba(154, 154, 153, 0.771);
+    border:1px solid rgba(169, 168, 166, 0.771);
+}
+@keyframes Anim1 {
+    from{
+        transform: scale(1) rotate(-90deg);
+    }
+    to{transform: scale(0.3) rotate(90deg);}
+}
+
+@keyframes Anim2 {
+
+0%{
+    transform: scale(1);
+}
+50%{
+    transform: scale(2);
+}
+100%{
+    transform: scale(1);
+    opacity: 0;
+}
+
+} */

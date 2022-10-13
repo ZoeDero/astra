@@ -1,0 +1,32 @@
+body {
+    overflow: hidden;
+    height:100vh;
+}
+#root{
+    height: 100vh!important;
+    
+}
+h1{
+    text-align: center;
+}
+.base-color{
+    background-color: white;
+    color:rgb(238, 238, 239);
+
+}
+
+.youtube-color{
+    background-color: red;
+    color: white;
+
+}
+
+.twitch-color{
+    background-color: rgb(221, 0, 255);
+    color: white;
+}
+
+.insta-color{
+    background-color: rgb(23, 22, 22);
+    color: rgb(251, 213, 25);
+}
