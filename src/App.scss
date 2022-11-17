@@ -1,6 +1,9 @@
-body {
-    overflow: hidden;
-    height:100vh;
+main {
+    // overflow: hidden;
+    height:100%;
+    background: linear-gradient(157deg, rgba(255,255,255,1) 46%, rgba(125,125,125,1) 100%);
+    background-position:fixed;
+
 }
 #root{
     height: 100vh!important;
@@ -9,24 +12,28 @@ body {
 h1{
     text-align: center;
 }
-.base-color{
-    background-color: white;
-    color:rgb(238, 238, 239);
+// .base-color{
+//     background-color: white;
+//     color:rgb(238, 238, 239);
 
-}
+// }
 
-.youtube-color{
-    background-color: red;
-    color: white;
+// .youtube-color{
+//     background-color: red;
+//     color: white;
 
-}
+// }
 
-.twitch-color{
-    background-color: rgb(221, 0, 255);
-    color: white;
-}
+// .twitch-color{
+//     background-color: rgb(221, 0, 255);
+//     color: white;
+// }
 
-.insta-color{
-    background-color: rgb(23, 22, 22);
-    color: rgb(251, 213, 25);
+// .insta-color{
+//     background-color: rgb(23, 22, 22);
+//     color: rgb(251, 213, 25);
+// }
+
+@media screen {
+    
 }

@@ -1,9 +1,10 @@
 body{
-  
+
     background: linear-gradient(157deg, rgba(255,255,255,1) 46%, rgba(125,125,125,1) 100%);
 }
 .logo{
     text-align: center;
+    
     
     
 }
@@ -12,9 +13,27 @@ body{
     
     
     margin:auto;
-    margin-top:15%;
+    
     
  
+}
+
+a i{
+    color:white!important;
+    text-decoration: none!important;
+}
+
+a i:hover{
+    color:orange!important;
+}
+
+a i:focus{
+    color:orange!important;
+}
+
+.presentation_text{
+    padding-left: 10%;
+    padding-right:10%;
 }
 
 

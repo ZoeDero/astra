@@ -1,0 +1,16 @@
+
+.btn-close{
+    background-color: rgb(255, 196, 0);
+}
+hr{
+    color:orange;
+}
+
+.input{
+    border-top: 2px;
+    border-left: 2px;
+    border-right: 2px;
+    border-color: orange;
+    
+    
+}

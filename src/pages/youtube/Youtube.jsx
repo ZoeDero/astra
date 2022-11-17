@@ -8,7 +8,7 @@ const Youtube = () => {
         <div id="yt">
         <div >
             
-            <h1>Youtube</h1>
+            <h1 className='titre_yt'>Youtube</h1>
            
 
 
@@ -16,6 +16,8 @@ const Youtube = () => {
         <div >
 <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' id="player_yt" />
 </div>
+
+<a href="https://www.youtube.com"><button type="submit" className='btn-link'>Vers ma chaîne Youtube</button></a>
 </div>
     );
 };

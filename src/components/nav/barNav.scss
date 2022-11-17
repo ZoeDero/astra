@@ -3,10 +3,10 @@
 #navigation {
     height:10vh;
     width: 10vh;
-  margin-top: 45vh;
-   padding-left: 10px;
-   padding-right: 10px;
-   transform: rotate(-90deg);
+    margin-top: 45vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: rotate(-90deg);
     position:fixed;
    
     
@@ -15,9 +15,9 @@
 
 #navigation a{
     height:10px;
-    margin:5px;
+    margin:0px 5px;
     color:rgb(133, 134, 135);
-    padding-top:2px;
+    // padding-top:2px;
     
 }
 
@@ -34,13 +34,55 @@
 #navigation a:hover {
     
     padding-top: 0px;
-    // margin-top: 15px !important;
+  
     // cursor:none;
-    border-top:2px solid orange;
+    border-top:5px solid orange;
    
    
 }
 
+#navigation a:focus{
+    padding-top: 0px;
+  
+    // cursor:none;
+    border-top:5px solid orange;
+
+}
+.respNavBar{
+    
+    background-color: rgb(72, 72, 72);
+    display: none;
+    height:5%;
+
+    
+   
+}
+
+@media screen and (width < 800px){
+
+    #navigation{
+        display:none!important;
+    }
+    .respNavBar{
+        display:flex;
+        justify-content: center;
+        bottom: 0px;
+        position:fixed ;
+    }
+
+        .respNavBar a{
+            vertical-align: baseline;
+            
+
+        }
+        .respNavBar i{
+            margin: 5px;
+        }
+        .respNavBar a:focus{
+            color: orange;
+            
+        }
+}
 
 .twitch {
     color: white;
