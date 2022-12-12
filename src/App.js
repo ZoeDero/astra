@@ -8,10 +8,11 @@ import {
 } from "react-router-dom";
 import React, {Suspense, useState, useEffect} from'react';
 import BaseScreen from './pages/baseScreen/BaseScreen'
+import OffCanvas from './components/nav/OffCanvas';
 
 
 
-
+//authorisations a faire pour le offcanvas profil rapide et pour la page compte utilisateur
 
 
 //CUSTOM POINTER
@@ -84,6 +85,12 @@ function App() {
             <Route path="/articleByCategory" element={
               <Suspense>
               <CategoryScreen/>
+            </Suspense>
+          }/>
+       
+        <Route path="/login" element={
+              <Suspense>
+              <OffCanvas/>
             </Suspense>
           }/>
         </Route>
